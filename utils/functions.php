@@ -95,30 +95,30 @@ function validateFormCompetence() {
         $errors[] = 'merci de noter la compétence';
     }
 
-    if (isset($_POST['note'])){
-        $_POST['note'] = $input;
-    }
+    // if (isset($_POST['note'])){
+    //     $_POST['note'] = $input;
+    // }
 
-    switch ($input) {
-        case 0:
-            $etoile = "i égal 0";
-            break;
-        case 1:
-            $etoile = "i égal 1";
-            break;
-        case 2:
-            $etoile = "i égal 2";
-            break;
-        case 3:
-            $etoile = "i égal 2";
-            break;
-        case 4:
-            $etoile = "i égal 2";
-            break;
-        case 5:
-            $etoile = "i égal 2";
-            break;
-    }
+    // switch ($input) {
+    //     case 0:
+    //         $etoile = "i égal 0";
+    //         break;
+    //     case 1:
+    //         $etoile = "i égal 1";
+    //         break;
+    //     case 2:
+    //         $etoile = "i égal 2";
+    //         break;
+    //     case 3:
+    //         $etoile = "i égal 2";
+    //         break;
+    //     case 4:
+    //         $etoile = "i égal 2";
+    //         break;
+    //     case 5:
+    //         $etoile = "i égal 2";
+    //         break;
+    // }
 
     return $errors;
 }
