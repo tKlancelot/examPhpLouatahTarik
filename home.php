@@ -7,7 +7,6 @@ include ('jumbotron.php');
 
 ?>
 
-
 <!-- affichage du c.v. 'dynamique'
 pour l'utilisateur comme pour l'admin  -->
 
@@ -48,6 +47,11 @@ $results = $req->fetchAll();
 $req2 = $bdd -> query('SELECT * FROM competence');
 $results2 = $req2->fetchAll();
 
+$count = $bdd->query('select count(*) as nb from competence');
+$data = $count->fetch();
+
+$nb = $data['nb'];
+
 ?>
 
 <div class="menu container col-10 mt-4">
@@ -69,6 +73,8 @@ $results2 = $req2->fetchAll();
     }
     ?>
   </tbody>
-  <caption class='lead text-uppercase'>mes compétences</caption>
+  <caption class='lead text-uppercase'>mes compétences : <?= $nb ?> au total </caption>
 </table>
 </div>
+
+
